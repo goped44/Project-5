@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
         <nav>
             <h3><span>Fruit</span>opia</h3>
             <ul>
@@ -25,6 +26,7 @@
                 </div>
         </nav>
     </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
 
     <div class="row">
         <div class="col-1">
@@ -40,6 +42,17 @@
             <img src="Photos/feature.png">
         </div>
     </div>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        } 
+    </script>
     
 </body>
 </html>
